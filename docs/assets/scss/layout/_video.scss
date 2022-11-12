@@ -1,0 +1,25 @@
+@use "../helpers/" as *;
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 98%;
+  gap: 2em;
+  align-items: center;
+
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-inline: auto;
+
+  & iframe {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .video-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

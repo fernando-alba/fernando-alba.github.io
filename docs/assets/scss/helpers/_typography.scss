@@ -1,0 +1,102 @@
+@use "_colors" as *;
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Lato", serif;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2.5em;
+  color: $accent;
+}
+
+h3 {
+  font-size: 1.5em;
+  color: $accent;
+}
+
+/* h4 {
+  color: $accent;
+  margin-bottom: 0;
+  &::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 1.5em;
+    height: 2px;
+    background-color: $accent;
+  }
+} */
+
+.section-title {
+  &::after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    margin: 0 auto;
+    margin-top: 0.75rem;
+    border-radius: 2.5px;
+    background-color: $accent;
+  }
+}
+
+.light {
+  color: $text-light;
+  padding-top: 1.25rem;
+
+  &::after {
+    background-color: $text-light;
+  }
+}
+
+.par-title {
+  font-size: 1.5em;
+  &::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 1.5em;
+    height: 2px;
+    background-color: $accent-dark;
+  }
+}
+
+strong {
+  font-weight: 400;
+}
+
+.about p {
+  text-align: left;
+}
+
+.citazione {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  width: 98%;
+  margin-inline: auto;
+
+  &::before,
+  &::after {
+    content: '"';
+    font-family: "Courier New", Courier, monospace;
+    font-size: 2.5rem;
+    color: $text-dark;
+  }
+
+  &::before {
+    position: relative;
+    bottom: 0.25em;
+  }
+
+  &::after {
+    position: relative;
+    bottom: -0.8em;
+  }
+}

@@ -1,0 +1,38 @@
+<header class="header">
+    <img routerLink="/" class="header--logo" src="../../assets/img/logo_fa.png" alt="Fernando Alba">
+
+    <div class="header--ham" (click)="animateMenu()">
+        <span class="header--ham-line" id="line1"></span>
+        <span class="header--ham-line" id="line2"></span>
+        <span class="header--ham-line" id="line3"></span>
+    </div>
+
+    <div class="header--menu">
+        <a routerLink="/" routerLinkActive="active-page" [routerLinkActiveOptions]="{exact: true}" class="header--menu--item">Home</a>
+        <a routerLink="biografia" routerLinkActive="active-page" [routerLinkActiveOptions]="{exact: true}" class="header--menu--item">Biografia</a>
+        <a routerLink="discografia" routerLinkActive="active-page" [routerLinkActiveOptions]="{exact: true}" class="header--menu--item">Discografia</a>
+        <a routerLink="video" routerLinkActive="active-page" [routerLinkActiveOptions]="{exact: true}" class="header--menu--item">Videoclip</a>
+        <a routerLink="contatti" routerLinkActive="active-page" [routerLinkActiveOptions]="{exact: true}" class="header--menu--item">Contatti & Booking</a>
+       </div>
+    
+</header>
+
+<div class="accordion-menu" id="accordion">
+   <div class="accordion-menu--list">
+    <a routerLink="/" routerLinkActive="active-page" [routerLinkActiveOptions]="{exact: true}" class="accordion-menu--list-item" (click)="animateMenu()">Home</a>
+    <a routerLink="biografia" routerLinkActive="active-page" [routerLinkActiveOptions]="{exact: true}" class="accordion-menu--list-item" (click)="animateMenu()">Biografia</a>
+    <a routerLink="discografia" routerLinkActive="active-page" [routerLinkActiveOptions]="{exact: true}" class="accordion-menu--list-item" (click)="animateMenu()">Discografia</a>
+    <a routerLink="video" routerLinkActive="active-page" [routerLinkActiveOptions]="{exact: true}" class="accordion-menu--list-item" (click)="animateMenu()">Videoclip</a>
+    <a routerLink="contatti" routerLinkActive="active-page" [routerLinkActiveOptions]="{exact: true}" class="accordion-menu--list-item" (click)="animateMenu()">Contatti & Booking</a>
+   </div>
+
+   <div class="social-container">
+        <a href="https://www.facebook.com/novacinemapress" target="_blank" class="hero--social--link social"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/novacinemapress/" target="_blank" class="hero--social--link social"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://open.spotify.com/artist/5AILp7055BTaKEXHK4M3NO?si=zbm3s7ZoTdKjLy4ogh3YDg" target="_blank" class="hero--social--link social"><i class="fa-brands fa-spotify"></i></a>
+        <a href="https://music.apple.com/it/artist/fernando-alba/379834270" target="_blank" class="hero--social--link social"><i class="fa-brands fa-apple"></i></a>
+        <a href="https://music.amazon.it/artists/B009MFSM18/fernando-alba?marketplaceId=APJ6JRA9NG5V4&musicTerritory=IT&ref=dm_sh_6rUDLp5RvJZenHCVVZjN7ckxI" target="_blank" class="hero--social--link social"><i class="fa-brands fa-amazon"></i></a>
+   </div>
+
+   <img src="../../assets/img/logo_fa.png" alt="Fernando Alba" class="accordion-menu--logo">
+</div>

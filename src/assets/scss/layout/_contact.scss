@@ -1,0 +1,14 @@
+@use "../helpers/" as *;
+
+.contact {
+  &--address {
+    &--text {
+      color: $text-light;
+      font-weight: 500;
+
+      &:first-of-type {
+        padding-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<div class="page">
+    <h2 class="page-title">Discografia</h2>
+
+    <h3 class="discog-subtitle section-title light">Singoli</h3>
+    <div class="cards-container singles">
+        <div class="discog-card card" *ngFor="let single of singles">
+            
+                <h4 class="album-title">{{ single.title }}</h4>
+                <p class="album-year">{{ single.year }}</p>
+                <img loading="lazy" [src]="'../../assets/img/discografia/' + single.image" alt="{{ single.title }}" class="album-img">
+
+
+            <div class="music-stream">
+                <a *ngIf="single.spotify" href="{{ single.spotify }}" target="_blank" class="music-stream--service"><i class="fa-brands fa-spotify"></i></a>
+                <a *ngIf="single.apple" href="{{ single.apple }}" target="_blank" class="music-stream--service"><i class="fa-brands fa-apple"></i></a>
+                <a *ngIf="single.amazon" href="{{ single.amazon }}" target="_blank" class="music-stream--service"><i class="fa-brands fa-amazon"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <h3 class="discog-subtitle section-title light">Album</h3>
+    <div class="cards-container albums">
+        <div class="discog-card card" *ngFor="let album of albums">
+            <h4 class="album-title">{{ album.title }}</h4>
+            <p class="album-year">{{ album.year }}</p>
+
+            <img loading="lazy" [src]="'../../assets/img/discografia/' + album.image" alt="{{ album.title }}" class="album-img">
+
+            <div class="music-stream">
+                <a *ngIf="album.spotify" href="{{ album.spotify }}" target="_blank" class="music-stream--service"><i class="fa-brands fa-spotify"></i></a>
+                <a *ngIf="album.apple" href="{{ album.apple }}" target="_blank" class="music-stream--service"><i class="fa-brands fa-apple"></i></a>
+                <a *ngIf="album.amazon" href="{{ album.amazon }}" target="_blank" class="music-stream--service"><i class="fa-brands fa-amazon"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
