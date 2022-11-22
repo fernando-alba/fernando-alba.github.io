@@ -31,5 +31,10 @@ $card-border-radius: 0.75em;
 @media screen and (min-width: 1000px) {
   .cards-container {
     max-width: 1400px;
+
+    &.singles,
+    &.albums {
+      max-width: 1200px;
+    }
   }
 }
