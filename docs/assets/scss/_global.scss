@@ -1,4 +1,4 @@
-@use "../helpers/" as *;
+@use "./helpers" as *;
 
 html {
   height: 100%;
@@ -11,13 +11,13 @@ body {
 }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
+  font-family: var(--ff-sans-serif);
+  font-weight: var(--fw-thin);
   font-size: 18px;
   margin: 0;
   box-sizing: border-box;
-  background-color: $background;
-  color: $text-light;
+  background-color: var(--clr-bg);
+  color: var(--clr-text-light);
   min-height: 100%;
 }
 
@@ -25,16 +25,16 @@ app-root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: $background;
+  background-color: var(--clr-bg);
 }
 
 p {
-  color: $text-light;
+  color: var(--clr-text-light);
 }
 
 .page {
   width: 100vw;
-  background-color: $accent;
+  background-color: var(--clr-accent);
   padding-bottom: 2em;
 
   &-title {
@@ -44,8 +44,8 @@ p {
     font-size: 1.25em;
     text-transform: uppercase;
     text-align: center;
-    background-color: $background;
-    color: $accent;
+    background-color: var(--clr-bg);
+    color: var(--clr-accent);
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 76%);
   }
 
@@ -69,7 +69,7 @@ p {
 
   & p.contact-par {
     text-align: center;
-    font-weight: 400;
+    font-weight: var(--fw-regular);
   }
 }
 
@@ -78,7 +78,7 @@ section {
   text-align: center;
   margin: 0 auto;
   margin-top: 2em;
-  background-color: $accent;
+  background-color: var(--clr-accent);
 
   & img {
     margin-bottom: 1em;
@@ -102,20 +102,19 @@ section.light {
 }
 
 section.dark {
-  background-color: $background;
-  color: $text-light;
+  background-color: var(--clr-bg);
+  color: var(--clr-text-light);
   padding-top: 1em;
-  /* padding-bottom: 1.5em; */
   margin-top: 0;
 
   & h2 {
-    color: $text-light;
+    color: var(--clr-text-light);
     &::after {
-      background-color: $text-light;
+      background-color: var(--clr-text-light);
     }
   }
   & p {
-    color: $text-light;
+    color: var(--clr-text-light);
   }
 }
 
@@ -140,7 +139,7 @@ app-footer {
 }
 
 .spacer {
-  background-color: $text-dark;
+  background-color: var(--clr-text-dark);
   height: 2px;
   border-radius: 1px;
   width: 80%;
@@ -148,7 +147,7 @@ app-footer {
   margin: 3em auto 2em auto;
 
   &-light {
-    background-color: $text-light;
+    background-color: var(--clr-text-light);
     margin: 3em auto 1em auto;
   }
 }
