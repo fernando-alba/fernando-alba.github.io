@@ -1,6 +1,2 @@
-/* You can add global styles to this file, and also import other style files */
-@use "src/assets/scss/base";
-@use "src/assets/scss/helpers";
-@use "src/assets/scss/grid";
-@use "src/assets/scss/elements";
-@use "src/assets/scss/layout";
+@use "./assets/scss/index";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { albums } from './albums';
-import { singles } from './singles';
+import { Release } from 'src/assets/static/types';
+import { albums } from '../../assets/static/albums';
+import { singles } from '../../assets/static/singles';
 
 @Component({
   selector: 'app-discog',
@@ -8,16 +9,10 @@ import { singles } from './singles';
   styleUrls: ['./discog.component.scss'],
 })
 export class DiscogComponent implements OnInit {
-  // @ts-ignore
-  albums;
-
-  // @ts-ignore
-  singles;
+  albums: Release[] = albums.reverse();
+  singles: Release[] = singles.reverse();
 
   constructor() {}
 
-  ngOnInit() {
-    this.albums = albums.reverse();
-    this.singles = singles.reverse();
-  }
+  ngOnInit() {}
 }

@@ -1,10 +1,10 @@
-<div class="page">
+<div class="page"> 
     <h2 class="page-title">Contatti & Booking</h2>
     <p class="contact-par">
         Per contatti e booking completate il form.
       </p>
   
-      <form class="form" (ngSubmit)="submitForm(contactForm)" #contactForm="ngForm">
+      <form class="form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <div class="form--field">
               <label for="name" class="form--label">Nome e cognome</label>
               <input

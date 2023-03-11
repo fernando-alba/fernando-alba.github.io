@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -7,6 +8,10 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
+  constructor(private http: HttpClient) {}
+
+  ngOnInit(): void {}
+
   name: string | undefined;
   subject: string | undefined;
   email: string | undefined;
@@ -14,13 +19,12 @@ export class ContactComponent implements OnInit {
 
   showMsg: boolean | false | undefined;
 
-  constructor(private http: HttpClient) {}
+  onSubmit(contactForm: NgForm) {
+    console.log(contactForm.value);
+    console.log(contactForm.valid);
 
-  ngOnInit(): void {}
-
-  // @ts-ignore
-  submitForm(contactForm) {
-    const formUrl = 'https://ncp-api.herokuapp.com/api/mail';
+    /* const formUrl = 'https://ncp-api.herokuapp.com/api/mail'; */
+    const formUrl = 'https://api.simplicitystudio.it/api/falba/mail';
     const data = contactForm.value;
 
     this.http.post(formUrl, data).subscribe((response) => {

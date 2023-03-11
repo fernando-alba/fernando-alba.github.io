@@ -1,0 +1,149 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  min-height: 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+
+  padding: 0 1rem;
+  background-color: var(--clr-dark);
+
+  &--logo {
+    max-width: 10rem;
+    cursor: pointer;
+  }
+
+  &--ham {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    justify-content: space-between;
+
+    cursor: pointer;
+
+    &-line {
+      height: 3.5px;
+      width: 2.5rem;
+      background: var(--clr-light);
+      display: block;
+      border-radius: 12%;
+      transition: all 200ms ease-in-out;
+      position: relative;
+    }
+  }
+
+  &--menu {
+    display: none;
+
+    &--item {
+      text-decoration: none;
+      color: var(--clr-text-light);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: var(--fw-regular);
+
+      &::after {
+        content: "";
+        display: block;
+        background-color: var(--clr-text-light);
+        width: 0%;
+        height: 2px;
+        border-radius: 1.5px;
+        margin: 0 auto;
+        margin-top: 0.25em;
+        transition: all 100ms ease-in-out;
+      }
+
+      &:hover,
+      &:focus {
+        &::after {
+          width: 30%;
+          background-color: var(--clr-accent);
+        }
+      }
+    }
+  }
+}
+
+.active-page {
+  &::after {
+    width: 30%;
+  }
+}
+
+.accordion-menu {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: -50em;
+  opacity: 0;
+  z-index: 1;
+
+  background-color: var(--clr-text-dark);
+  color: var(--clr-text-light);
+  padding-top: 5em;
+  transition: top 200ms ease-in-out;
+  transition: opacity 100ms ease-in;
+
+  &--list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+
+    &-item {
+      text-decoration: none;
+      color: var(--clr-text-light);
+      font-weight: var(--fw-regular);
+      font-size: 1.15rem;
+    }
+  }
+
+  &--logo {
+    max-width: 80%;
+    display: block;
+    margin-inline: auto;
+  }
+}
+
+.tilt1 {
+  transform: rotate(45deg);
+  top: 0.6rem;
+}
+
+.tilt2 {
+  transform: rotate(-45deg);
+  bottom: 0.6rem;
+}
+
+.hide-line {
+  opacity: 0;
+}
+
+.open-accordion {
+  top: 0;
+  opacity: 1;
+}
+
+@media screen and (min-width: 1100px) {
+  .header {
+    &--ham {
+      display: none;
+    }
+
+    &--menu {
+      display: flex;
+      gap: 1em;
+    }
+  }
+
+  .accordion-menu {
+    display: none;
+  }
+}

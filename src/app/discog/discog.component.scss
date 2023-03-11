@@ -1,0 +1,69 @@
+.discog {
+  &-subtitle {
+    text-align: center;
+  }
+
+  &-card {
+    background-color: var(--clr-dark-card);
+    color: var(--clr-accent);
+    width: 95%;
+    max-width: 360px !important;
+
+    & .music-stream {
+      display: flex;
+      justify-content: center;
+      gap: 1.25em;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      transition: all 100ms ease-in-out;
+
+      &--service {
+        cursor: pointer;
+        color: var(--clr-text-light);
+        font-size: 2em;
+        transition: all 100ms ease-in;
+
+        &:hover,
+        &:focus {
+          transform: scale(1.2);
+        }
+
+        &:last-of-type {
+          bottom: -0.15rem;
+          position: relative;
+        }
+
+        &:nth-of-type(2) {
+          font-size: 2.4rem;
+          position: relative;
+          top: -0.15rem;
+        }
+      }
+    }
+  }
+}
+
+.album {
+  &-title {
+    margin-bottom: 0em;
+  }
+  &-year {
+    font-size: 0.9rem;
+    color: var(--clr-text-light);
+    margin-bottom: 0.75em !important;
+    margin-top: 0.25em;
+  }
+
+  &-img {
+    max-width: 10em !important;
+    border-radius: 0.75em;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .singles,
+  .albums {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

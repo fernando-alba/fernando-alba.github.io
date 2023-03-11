@@ -1,0 +1,12 @@
+.contact {
+  &--address {
+    &--text {
+      color: var(--clr-text-light);
+      font-weight: var(--fw-regular);
+
+      &:first-of-type {
+        padding-bottom: 0;
+      }
+    }
+  }
+}

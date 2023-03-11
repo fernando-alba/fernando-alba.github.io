@@ -1,4 +1,9 @@
-export const singles = [
+import { Release } from './types';
+
+// Per aggiungere un singolo, in fondo, duplicare l'ultimo blocco tra due parentesi graffe e compilare tutti i campi avendo cura di
+// incrementare di +1 il campo id.
+
+export const singles: Release[] = [
   {
     id: 1,
     title: 'Favola',
